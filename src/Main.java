@@ -13,7 +13,7 @@ public class Main {
         // 3. Проверка ошибок
         atc.setSubscribersCount(-10);  // должно вывести предупреждение
         atc.setMonthlyFee(-5);         // должно вывести предупреждение
-        boolean ok = atc.setAddress("qwe"); // false + сообщение
+        atc.setAddress(" "); // false + сообщение
 
         // 4. Ещё раз выводим объект и итог
         System.out.println(atc);

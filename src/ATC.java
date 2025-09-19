@@ -10,13 +10,12 @@ public class ATC {
         setMonthlyFee(monthlyFee);
     }
 
-    public boolean setAddress(String address) {
+    public void setAddress(String address) {
         if (address == null || address.isBlank()) {
             System.out.println("Ошибка: адрес пустой!");
-            return false;
+        } else {
+            this.address = address;
         }
-        this.address = address;
-        return true;
     }
 
 
