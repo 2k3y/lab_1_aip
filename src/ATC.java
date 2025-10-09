@@ -2,7 +2,7 @@ public class ATC {
 
     private String address;
     private int subscribersCount;
-    private double monthlyFee; // будет свойство *только для записи*
+    private double monthlyFee;
 
     public ATC(String address, int subscribersCount, double monthlyFee) {
         setAddress(address);

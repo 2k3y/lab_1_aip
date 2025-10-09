@@ -11,12 +11,12 @@ public class Main {
         System.out.println("Общая абонентская плата: " + total);
 
         // 3. Проверка ошибок
-        atc.setSubscribersCount("цуйц");  // должно вывести предупреждение
-        atc.setMonthlyFee("йу");         // должно вывести предупреждение
-        atc.setAddress("Какой-то адрес"); // false + сообщение
+        atc.setSubscribersCount(-10);  // должно вывести предупреждение
+        atc.setMonthlyFee(-5);         // должно вывести предупреждение
+        atc.setAddress(" "); // false + сообщение
 
         // 4. Ещё раз выводим объект и итог
         System.out.println(atc);
-        System.out.println("Общая абонентская плата после ошибок: " + total);
+        System.out.println("Общая абонентская плата после ошибок: " + atc.computeTotalMonthlyFee());
     }
 }
