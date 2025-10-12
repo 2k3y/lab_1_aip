@@ -1,22 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        // Создание объекта с нормальными данными
-        ATC atc = new ATC("СПб, ул. Связи, 1", 1200, 300.0);
 
-        // 1. Вывод объекта (через toString)
+        ATC atc = new ATC("СПб, ул. Связи, 1", 100, 300);
+
         System.out.println(atc);
 
-        // 2. Подсчёт общей абонентской платы
+
         double total = atc.computeTotalMonthlyFee();
         System.out.println("Общая абонентская плата: " + total);
 
-        // 3. Проверка ошибок
-        atc.setSubscribersCount(-10);  // должно вывести предупреждение
-        atc.setMonthlyFee(-5);         // должно вывести предупреждение
-        atc.setAddress(" "); // false + сообщение
 
-        // 4. Ещё раз выводим объект и итог
+        atc.setSubscribersCount(10);
+        atc.setMonthlyFee(13);
+        atc.setAddress("СПб, ул. Связи, 1");
+
         System.out.println(atc);
-        System.out.println("Общая абонентская плата после ошибок: " + atc.computeTotalMonthlyFee());
+        System.out.println("Общая абонентская плата после ошибок: " + atc.computeTotalMonthlyFee() + "руб");
     }
 }
