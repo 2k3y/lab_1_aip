@@ -10,20 +10,20 @@ public class Main {
 
         int number;
         while (true) {
-            System.out.print("Введите количество пользователей: "); // та же строка
-            System.out.flush();                                      // на всякий случай, чтобы подсказка сразу вывелась
-            String line = in.nextLine().trim();                      // читаем ВСЮ строку
+            System.out.print("Введите количество пользователей: ");
+            System.out.flush();
+            String line = in.nextLine().trim();
 
             if (line.isEmpty()) {
                 System.out.println("Пусто. Введите целое число ≥ 0.");
                 continue;
             }
-            if (!line.matches("\\d+")) {                             // только цифры, без знаков
+            if (!line.matches("\\d+")) {
                 System.out.println("Ошибка: нужно целое число без знаков.");
                 continue;
             }
             try {
-                number = Integer.parseInt(line);                     // ловим переполнение int
+                number = Integer.parseInt(line);
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("Слишком большое число (макс 2147483647).");
