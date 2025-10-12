@@ -47,6 +47,6 @@ public class ATC {
 
     public void print() {
         System.out.println("Адрес АТС: " + address);
-        System.out.println("Абонентская плата: " + computeTotalMonthlyFee());
+        System.out.println("Общая абонентская плата: " + computeTotalMonthlyFee() + " руб.");
     }
 }

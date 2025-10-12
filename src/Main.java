@@ -7,7 +7,7 @@ public class Main {
         ATC atc = new ATC();
         atc.setAddress("Ул. Ленина");
         atc.setMonthlyFee(5);
-        atc.setSubscribersCount(10);
+
         int number;
         while (true) {
             System.out.print("Введите количество пользователей: "); // та же строка
